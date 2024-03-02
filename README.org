@@ -1,0 +1,32 @@
+#+TITLE: Reach Me
+#+OPTIONS: toc
+
+* (How-To) Encrypt Your Message For Me
+
+Before encryption, you should **Import The Keys**.
+
+On Unix:
+
+#+begin_src bash
+  echo 'my message' | gpg -aer micl2e2
+#+end_src
+
+The output should be like:
+#+begin_src
+-----BEGIN PGP MESSAGE-----
+
+.....................................
+.....................................
+-----END PGP MESSAGE-----
+#+end_src
+
+Now you can copy the output and send it to my Email address, which
+can be found by =gpg --list-keys=.
+
+* (How-To) Import The Keys
+
+Download the file =pgp-micl2e2.asc=, and run
+#+begin_src bash
+  gpg --import pgp-micl2e2.asc
+#+end_src
+
